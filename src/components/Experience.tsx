@@ -1,4 +1,5 @@
 import { experiences } from '../data/profile';
+import { IconList } from './icons/IconList';
 import { SectionHeading } from './SectionHeading';
 
 export function Experience() {
@@ -30,9 +31,9 @@ export function Experience() {
                     </li>
                   ))}
                 </ul>
-                <p className="mt-7 text-sm leading-7 text-neutral-500 dark:text-neutral-400">
-                  {experience.stack.join(' / ')}
-                </p>
+                <div className="mt-7">
+                  <IconList technologies={experience.stack} />
+                </div>
               </div>
             </article>
           ))}

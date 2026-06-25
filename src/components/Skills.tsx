@@ -1,4 +1,5 @@
 import { skillGroups } from '../data/profile';
+import { IconList } from './icons/IconList';
 import { SectionHeading } from './SectionHeading';
 
 export function Skills() {
@@ -14,9 +15,9 @@ export function Skills() {
           {skillGroups.map((group) => (
             <div key={group.label} className="border-t border-neutral-950 pt-5 dark:border-white">
               <h3 className="text-lg font-semibold text-neutral-950 dark:text-white">{group.label}</h3>
-              <p className="mt-4 text-base leading-8 text-neutral-600 dark:text-neutral-300">
-                {group.items.join(' / ')}
-              </p>
+              <div className="mt-4">
+                <IconList technologies={group.items} />
+              </div>
             </div>
           ))}
         </div>
