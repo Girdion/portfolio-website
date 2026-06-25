@@ -34,7 +34,7 @@ export const profile = {
   about:
     'I am a software engineer focused on backend and full stack roles where reliability, clear data flows, and practical product delivery matter. My experience spans enterprise banking systems, insurance operations platforms, production issue investigation, SQL optimization, ASP.NET modernization, secure authentication, and React-based internal tools. I am also interested in growing toward Go-based backend engineering roles.',
   thesis:
-    'IEEE-published thesis research demonstrating technical writing, experimentation, and the ability to communicate engineering work beyond implementation.',
+    'Conducted research on DDoS detection in Software-Defined Networks (SDN) during my undergraduate studies. The work was later published through IEEE.',
 };
 
 export const experiences: Experience[] = [
