@@ -8,8 +8,8 @@ export function Experience() {
       <div className="section-shell">
         <SectionHeading
           eyebrow="Experience"
-          title="Enterprise systems, production issues, measurable impact."
-          description="The work below is written for recruiters and engineering interviewers: what was built, what improved, and what technical judgment it required."
+          title="Professional Experience"
+          description="A look at the teams, products, and systems I've contributed to throughout my software engineering journey."
         />
         <div className="divide-y divide-neutral-200 border-y border-neutral-950 dark:divide-neutral-800 dark:border-white">
           {experiences.map((experience) => (
