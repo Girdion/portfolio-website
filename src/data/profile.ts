@@ -25,14 +25,14 @@ export const profile = {
   instagram: 'https://www.instagram.com/jonathandjoko/',
   cvUrl: '/files/jonathan-djoko-cv.pdf',
   hero:
-    'I build reliable APIs, SQL-backed systems, and enterprise workflows, with production experience across banking and insurance.',
+    'I build reliable APIs, SQL-backed systems, and enterprise workflows, with a growing interest in Go-based backend development.',
   intro: [
     'I am drawn to software engineering because it sits between logic and usefulness: small decisions in code can make work clearer, faster, and less frustrating for real people.',
     'I like learning new technologies, taking systems apart to understand them, and bringing a sense of creativity from art and music into how I think about product and engineering problems.',
     'Long term, I want to build meaningful products with teams that care about reliability, craft, and continuous improvement.',
   ],
   about:
-    'I am a software engineer focused on backend and full stack roles where reliability, clear data flows, and practical product delivery matter. My experience spans enterprise banking systems, insurance operations platforms, production issue investigation, SQL optimization, ASP.NET modernization, secure authentication, and React-based internal tools.',
+    'I am a software engineer focused on backend and full stack roles where reliability, clear data flows, and practical product delivery matter. My experience spans enterprise banking systems, insurance operations platforms, production issue investigation, SQL optimization, ASP.NET modernization, secure authentication, and React-based internal tools. I am also interested in growing toward Go-based backend engineering roles.',
   thesis:
     'IEEE-published thesis research demonstrating technical writing, experimentation, and the ability to communicate engineering work beyond implementation.',
 };
@@ -50,7 +50,7 @@ export const experiences: Experience[] = [
       'Integrated SonarQube for .NET Framework applications and remediated SAST/DAST findings to improve security and code quality compliance.',
       'Contributed to ASP.NET modernization and migration work across enterprise banking systems.',
     ],
-    stack: ['csharp', 'aspnet', 'sqlserver', 'sonarqube'],
+    stack: ['csharp', 'aspnet', 'sqlserver', 'git'],
   },
   {
     company: 'Asuransi Astra Buana',
@@ -65,14 +65,14 @@ export const experiences: Experience[] = [
       'Built queue management interfaces for branch offices, including real-time dashboards, TV display views, frontliner status, and automated queue announcements.',
       'Contributed to micro-frontend architecture and deployment using Nginx.',
     ],
-    stack: ['react', 'typescript', 'tailwind', 'mui', 'azure', 'nginx'],
+    stack: ['javascript', 'react', 'tailwind', 'mui', 'git'],
   },
 ];
 
 export const skillGroups: SkillGroup[] = [
   {
     label: 'Backend',
-    items: ['csharp', 'aspnet', 'sqlserver', 'python'],
+    items: ['csharp', 'aspnet', 'sqlserver', 'go', 'python'],
   },
   {
     label: 'Frontend',

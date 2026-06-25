@@ -51,7 +51,7 @@ export const projects: Project[] = [
     category: 'Enterprise workflow app',
     description:
       'Internal employee platform for reimbursements, approval workflows, service requests, and day-to-day company operations.',
-    technologies: ['react', 'typescript', 'tailwind', 'azure'],
+    technologies: ['react', 'javascript', 'tailwind', 'azure'],
     achievements: [
       'Built responsive interfaces for multi-step request workflows.',
       'Implemented validation logic and backend API integration.',
@@ -64,7 +64,7 @@ export const projects: Project[] = [
     category: 'Queue management system',
     description:
       'Queue management system for insurance branch offices, supporting customer check-ins, frontliner status, real-time monitoring, and TV display views.',
-    technologies: ['react', 'typescript', 'mui', 'aspnet', 'nginx'],
+    technologies: ['react', 'javascript', 'mui', 'aspnet', 'nginx'],
     achievements: [
       'Built real-time dashboard and queue status interfaces.',
       'Integrated APIs for check-in, walk-in services, and frontliner status tracking.',

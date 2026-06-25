@@ -9,7 +9,7 @@ export function Skills() {
         <SectionHeading
           eyebrow="Skills"
           title="A practical stack for backend and full stack work."
-          description="Grouped by how the skills show up in real work, not as a wall of disconnected badges."
+          description="A concise view of the tools I use professionally and the backend technologies I am interested in growing with, including Go."
         />
         <div className="grid gap-8 md:grid-cols-2">
           {skillGroups.map((group) => (

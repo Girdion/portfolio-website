@@ -32,7 +32,7 @@ export function Experience() {
                   ))}
                 </ul>
                 <div className="mt-7">
-                  <IconList technologies={experience.stack} />
+                  <IconList showLabels technologies={experience.stack} />
                 </div>
               </div>
             </article>
