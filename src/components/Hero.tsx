@@ -3,7 +3,7 @@ import { profile } from '../data/profile';
 function CodeSignal() {
   return (
     <div
-      className="code-card mt-10 border border-neutral-200 p-5 dark:border-neutral-800"
+      className="code-card mt-10 border border-neutral-200 p-4 dark:border-neutral-800 sm:p-5"
       aria-hidden="true"
     >
       <div className="flex items-center gap-2 border-b border-neutral-200 pb-4 dark:border-neutral-800">
@@ -28,7 +28,7 @@ export function Hero() {
   return (
     <section
       id="top"
-      className="section-shell animate-page-load grid min-h-[calc(100vh-73px)] content-center gap-14 lg:grid-cols-[1.08fr_0.92fr]"
+      className="section-shell animate-page-load grid min-h-[calc(100svh-73px)] content-center gap-14 lg:grid-cols-[1.08fr_0.92fr]"
     >
       <div className="max-w-3xl">
         <p className="eyebrow">{profile.location}</p>
