@@ -21,7 +21,7 @@ import {
   SiTailwindcss,
   SiTypescript,
 } from 'react-icons/si';
-import { TbApi, TbBrandAzure, TbDatabase } from 'react-icons/tb';
+import { TbBrandAzure, TbDatabase } from 'react-icons/tb';
 import type { Technology } from '../../data/projects';
 
 type IconMeta = {
@@ -47,7 +47,6 @@ const iconMap: Record<Technology, IconMeta> = {
   python: { label: 'Python', Icon: SiPython },
   react: { label: 'React', Icon: SiReact },
   redis: { label: 'Redis', Icon: SiRedis },
-  rest: { label: 'REST APIs', Icon: TbApi },
   sonarqube: { label: 'SonarQube', Icon: SiSonarqubeserver },
   sqlserver: { label: 'SQL Server', Icon: TbDatabase },
   tailwind: { label: 'Tailwind CSS', Icon: SiTailwindcss },

@@ -50,7 +50,7 @@ export const experiences: Experience[] = [
       'Integrated SonarQube for .NET Framework applications and remediated SAST/DAST findings to improve security and code quality compliance.',
       'Contributed to ASP.NET modernization and migration work across enterprise banking systems.',
     ],
-    stack: ['csharp', 'aspnet', 'sqlserver', 'sonarqube', 'rest'],
+    stack: ['csharp', 'aspnet', 'sqlserver', 'sonarqube'],
   },
   {
     company: 'Asuransi Astra Buana',
@@ -72,7 +72,7 @@ export const experiences: Experience[] = [
 export const skillGroups: SkillGroup[] = [
   {
     label: 'Backend',
-    items: ['csharp', 'aspnet', 'rest', 'sqlserver', 'python'],
+    items: ['csharp', 'aspnet', 'sqlserver', 'python'],
   },
   {
     label: 'Frontend',

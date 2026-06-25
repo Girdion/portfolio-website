@@ -16,7 +16,6 @@ export type Technology =
   | 'python'
   | 'react'
   | 'redis'
-  | 'rest'
   | 'sonarqube'
   | 'sqlserver'
   | 'tailwind'
@@ -39,7 +38,7 @@ export const projects: Project[] = [
     category: 'Banking platform',
     description:
       'Enterprise banking platform supporting application processing, monitoring, and reporting for housing subsidy financing workflows.',
-    technologies: ['aspnet', 'csharp', 'sqlserver', 'rest', 'javascript'],
+    technologies: ['aspnet', 'csharp', 'sqlserver', 'javascript'],
     achievements: [
       'Implemented backend features and maintained ASP.NET MVC functionality.',
       'Resolved production issues across reporting and data flows.',
@@ -52,7 +51,7 @@ export const projects: Project[] = [
     category: 'Enterprise workflow app',
     description:
       'Internal employee platform for reimbursements, approval workflows, service requests, and day-to-day company operations.',
-    technologies: ['react', 'typescript', 'tailwind', 'rest', 'azure'],
+    technologies: ['react', 'typescript', 'tailwind', 'azure'],
     achievements: [
       'Built responsive interfaces for multi-step request workflows.',
       'Implemented validation logic and backend API integration.',
@@ -65,7 +64,7 @@ export const projects: Project[] = [
     category: 'Queue management system',
     description:
       'Queue management system for insurance branch offices, supporting customer check-ins, frontliner status, real-time monitoring, and TV display views.',
-    technologies: ['react', 'typescript', 'mui', 'aspnet', 'rest', 'nginx'],
+    technologies: ['react', 'typescript', 'mui', 'aspnet', 'nginx'],
     achievements: [
       'Built real-time dashboard and queue status interfaces.',
       'Integrated APIs for check-in, walk-in services, and frontliner status tracking.',
@@ -78,7 +77,7 @@ export const projects: Project[] = [
     category: 'Event display system',
     description:
       'Interactive large-screen display application presented on an 80-inch LED screen during Asuransi Astra’s corporate anniversary event.',
-    technologies: ['react', 'typescript', 'tailwind', 'rest'],
+    technologies: ['react', 'typescript', 'tailwind'],
     achievements: [
       'Built dynamic attendance and employee birthday visualization components.',
       'Optimized layout and rendering for an 80-inch LED display.',

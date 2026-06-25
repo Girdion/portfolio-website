@@ -26,7 +26,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
       <p className="mt-5 text-base leading-7 text-neutral-600 dark:text-neutral-300">{project.description}</p>
 
       <div className="mt-6">
-        <IconList technologies={project.technologies} />
+        <IconList showLabels technologies={project.technologies} />
       </div>
 
       <ul className="mt-7 space-y-3">
@@ -38,36 +38,31 @@ export function ProjectCard({ project }: ProjectCardProps) {
         ))}
       </ul>
 
-      <div className="mt-8 flex flex-wrap gap-3 border-t border-neutral-200 pt-5 dark:border-neutral-800">
-        {project.githubUrl ? (
-          <a
-            href={project.githubUrl}
-            className="focus-ring inline-flex items-center gap-2 text-sm font-medium text-neutral-950 hover:opacity-60 dark:text-white"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <FaGithub aria-hidden="true" className="h-4 w-4" />
-            GitHub
-          </a>
-        ) : (
-          <span className="inline-flex items-center gap-2 text-sm text-neutral-500 dark:text-neutral-400">
-            <FaGithub aria-hidden="true" className="h-4 w-4" />
-            GitHub unavailable
-          </span>
-        )}
-        {project.liveDemoUrl ? (
-          <a
-            href={project.liveDemoUrl}
-            className="focus-ring text-sm font-medium text-neutral-950 hover:opacity-60 dark:text-white"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Live demo
-          </a>
-        ) : (
-          <span className="text-sm text-neutral-500 dark:text-neutral-400">No public demo</span>
-        )}
-      </div>
+      {(project.githubUrl || project.liveDemoUrl) ? (
+        <div className="mt-8 flex flex-wrap gap-3 border-t border-neutral-200 pt-5 dark:border-neutral-800">
+          {project.githubUrl ? (
+            <a
+              href={project.githubUrl}
+              className="focus-ring inline-flex items-center gap-2 text-sm font-medium text-neutral-950 hover:opacity-60 dark:text-white"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <FaGithub aria-hidden="true" className="h-4 w-4" />
+              GitHub
+            </a>
+          ) : null}
+          {project.liveDemoUrl ? (
+            <a
+              href={project.liveDemoUrl}
+              className="focus-ring text-sm font-medium text-neutral-950 hover:opacity-60 dark:text-white"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Live demo
+            </a>
+          ) : null}
+        </div>
+      ) : null}
     </article>
   );
 }
