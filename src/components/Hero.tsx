@@ -54,6 +54,13 @@ export function Hero() {
           >
             View Experience
           </a>
+          <a
+            href={profile.cvUrl}
+            download
+            className="focus-ring inline-flex justify-center border border-neutral-300 px-6 py-3 text-sm font-semibold uppercase tracking-[0.16em] text-neutral-700 transition duration-300 hover:-translate-y-0.5 hover:border-neutral-950 hover:text-neutral-950 dark:border-neutral-700 dark:text-neutral-300 dark:hover:border-white dark:hover:text-white"
+          >
+            Download CV
+          </a>
         </div>
       </div>
 

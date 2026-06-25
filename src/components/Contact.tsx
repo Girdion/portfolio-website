@@ -1,8 +1,9 @@
 import { profile } from '../data/profile';
+import { FaEnvelope, FaLinkedin } from 'react-icons/fa6';
 
 const links = [
-  { label: 'Email', href: `mailto:${profile.email}` },
-  { label: 'LinkedIn', href: profile.linkedin },
+  { label: 'Email', href: `mailto:${profile.email}`, Icon: FaEnvelope },
+  { label: 'LinkedIn', href: profile.linkedin, Icon: FaLinkedin },
 ];
 
 export function Contact() {
@@ -18,17 +19,25 @@ export function Contact() {
             <p className="mt-6 max-w-2xl text-lg leading-8 text-neutral-600 dark:text-neutral-300">
               I am especially interested in teams building reliable APIs, data-heavy products, enterprise systems, and workflow platforms. GitHub and additional project links can be added when public repositories are ready.
             </p>
+            <a
+              href={profile.cvUrl}
+              download
+              className="focus-ring mt-8 inline-flex border border-neutral-950 px-5 py-3 text-sm font-semibold uppercase tracking-[0.16em] text-neutral-950 hover:-translate-y-0.5 hover:bg-neutral-950 hover:text-white dark:border-white dark:text-white dark:hover:bg-white dark:hover:text-neutral-950"
+            >
+              Download CV
+            </a>
           </div>
           <address className="not-italic">
             <div className="space-y-3">
-              {links.map((link) => (
+              {links.map(({ Icon, ...link }) => (
                 <a
                   key={link.label}
                   href={link.href}
-                  className="focus-ring block border-b border-neutral-200 pb-3 text-base font-medium text-neutral-950 hover:border-neutral-950 dark:border-neutral-800 dark:text-white dark:hover:border-white"
+                  className="focus-ring flex items-center gap-3 border-b border-neutral-200 pb-3 text-base font-medium text-neutral-950 hover:border-neutral-950 dark:border-neutral-800 dark:text-white dark:hover:border-white"
                   target={link.href.startsWith('http') ? '_blank' : undefined}
                   rel={link.href.startsWith('http') ? 'noreferrer' : undefined}
                 >
+                  <Icon aria-hidden="true" className="h-4 w-4" />
                   {link.label}
                 </a>
               ))}
@@ -39,6 +48,11 @@ export function Contact() {
               {profile.location}
             </p>
           </address>
+        </div>
+        <div className="mt-16 border-t border-neutral-200 pt-6 dark:border-neutral-800">
+          <p className="text-xs uppercase tracking-[0.18em] text-neutral-500 dark:text-neutral-400">
+            Jonathan Djoko / Software Engineering Portfolio
+          </p>
         </div>
       </div>
     </footer>

@@ -1,18 +1,17 @@
+import type { Technology } from './projects';
+
 export type Experience = {
   company: string;
   role: string;
   period: string;
   summary: string;
   bullets: string[];
-  stack: string[];
+  stack: Technology[];
 };
 
-export type Project = {
-  name: string;
-  type: string;
-  summary: string;
-  impact: string[];
-  stack: string[];
+export type SkillGroup = {
+  label: string;
+  items: Technology[];
 };
 
 export const profile = {
@@ -22,6 +21,7 @@ export const profile = {
   email: 'jonathandjoko28@gmail.com',
   phone: '+6281253735427',
   linkedin: 'https://linkedin.com/in/jonathandjoko',
+  cvUrl: '/files/jonathan-djoko-cv.pdf',
   hero:
     'I build reliable APIs, SQL-backed systems, and enterprise workflows, with production experience across banking and insurance.',
   intro: [
@@ -48,7 +48,7 @@ export const experiences: Experience[] = [
       'Integrated SonarQube for .NET Framework applications and remediated SAST/DAST findings to improve security and code quality compliance.',
       'Contributed to ASP.NET modernization and migration work across enterprise banking systems.',
     ],
-    stack: ['C#', 'ASP.NET', 'SQL Server', 'Stored Procedures', 'SonarQube', 'REST APIs'],
+    stack: ['csharp', 'aspnet', 'sqlserver', 'sonarqube', 'rest'],
   },
   {
     company: 'Asuransi Astra Buana',
@@ -63,76 +63,25 @@ export const experiences: Experience[] = [
       'Built queue management interfaces for branch offices, including real-time dashboards, TV display views, frontliner status, and automated queue announcements.',
       'Contributed to micro-frontend architecture and deployment using Nginx.',
     ],
-    stack: ['React', 'TypeScript', 'Redux', 'Tailwind CSS', 'MUI', 'Azure', 'Nginx'],
+    stack: ['react', 'typescript', 'tailwind', 'mui', 'azure', 'nginx'],
   },
 ];
 
-export const projects: Project[] = [
-  {
-    name: 'BNI Housing Subsidy Financing Platform',
-    type: 'Banking platform',
-    summary:
-      'Enterprise banking platform supporting application processing, monitoring, and reporting for housing subsidy financing workflows.',
-    impact: [
-      'Implemented backend features and maintained ASP.NET MVC functionality.',
-      'Resolved production issues across reporting and data flows.',
-      'Optimized report generation from approximately 40 seconds to under 3 seconds.',
-    ],
-    stack: ['ASP.NET MVC', 'C#', 'SQL Server', 'REST API', 'jQuery'],
-  },
-  {
-    name: 'RIANG Employee Super App',
-    type: 'Enterprise workflow app',
-    summary:
-      'Internal employee platform for reimbursements, approval workflows, service requests, and day-to-day company operations.',
-    impact: [
-      'Built responsive React interfaces for multi-step request workflows.',
-      'Implemented validation logic and backend API integration.',
-      'Supported secure login through Microsoft Identity and Azure MFA.',
-    ],
-    stack: ['React', 'Redux', 'Tailwind CSS', 'REST APIs', 'Azure MFA'],
-  },
-  {
-    name: 'Service Traffic System',
-    type: 'Queue management system',
-    summary:
-      'Queue management system for insurance branch offices, supporting customer check-ins, frontliner status, real-time monitoring, and TV display views.',
-    impact: [
-      'Built real-time dashboard and queue status interfaces.',
-      'Integrated APIs for check-in, walk-in services, and frontliner status tracking.',
-      'Developed TV display views and automated voice announcement flows.',
-    ],
-    stack: ['React', 'Redux', 'MUI', 'ASP.NET', 'REST APIs', 'Nginx'],
-  },
-  {
-    name: 'Asuransi Astra Anniversary Digital Display',
-    type: 'Event display system',
-    summary:
-      'Interactive large-screen display application presented on an 80-inch LED screen during Asuransi Astra’s corporate anniversary event.',
-    impact: [
-      'Built dynamic attendance and employee birthday visualization components.',
-      'Optimized layout and rendering for a large-screen environment.',
-      'Rendered real-time data to support participant engagement during the event.',
-    ],
-    stack: ['React', 'TypeScript', 'REST API', 'Tailwind CSS'],
-  },
-];
-
-export const skillGroups = [
+export const skillGroups: SkillGroup[] = [
   {
     label: 'Backend',
-    items: ['C#', 'ASP.NET', 'REST APIs', 'SQL Server', 'Stored procedures', 'Python'],
+    items: ['csharp', 'aspnet', 'rest', 'sqlserver', 'python'],
   },
   {
     label: 'Frontend',
-    items: ['React', 'TypeScript', 'JavaScript', 'Redux', 'Tailwind CSS', 'Material UI', 'Next.js'],
+    items: ['react', 'typescript', 'javascript', 'tailwind', 'mui', 'nextjs'],
   },
   {
     label: 'Data and Systems',
-    items: ['Query optimization', 'Relational data modeling', 'Production debugging', 'API integration'],
+    items: ['sqlserver', 'postgresql', 'redis', 'docker'],
   },
   {
     label: 'Engineering Practice',
-    items: ['SonarQube', 'SAST/DAST remediation', 'Git', 'Bitbucket', 'Postman', 'Agile collaboration', 'Nginx'],
+    items: ['sonarqube', 'git', 'github', 'bitbucket', 'postman', 'nginx'],
   },
 ];
