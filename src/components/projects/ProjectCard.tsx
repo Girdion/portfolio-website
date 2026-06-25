@@ -8,17 +8,17 @@ type ProjectCardProps = {
 
 export function ProjectCard({ project }: ProjectCardProps) {
   return (
-    <article className="flex h-full flex-col border border-neutral-200 bg-white p-6 dark:border-neutral-800 dark:bg-neutral-950 sm:p-8">
-      <div className="flex items-start justify-between gap-6">
+    <article className="flex h-full min-w-0 flex-col border border-neutral-200 bg-white p-5 dark:border-neutral-800 dark:bg-neutral-950 sm:p-8">
+      <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between sm:gap-6">
         <div>
           <p className="text-xs uppercase tracking-[0.18em] text-neutral-500 dark:text-neutral-400">
             {project.category}
           </p>
-          <h3 className="mt-4 text-2xl font-semibold tracking-[-0.02em] text-neutral-950 dark:text-white">
+          <h3 className="mt-4 text-xl font-semibold tracking-[-0.02em] text-neutral-950 dark:text-white sm:text-2xl">
             {project.title}
           </h3>
         </div>
-        <p className="shrink-0 border border-neutral-200 px-2.5 py-1 text-[0.65rem] uppercase tracking-[0.16em] text-neutral-500 dark:border-neutral-800 dark:text-neutral-400">
+        <p className="w-fit shrink-0 border border-neutral-200 px-2.5 py-1 text-[0.65rem] uppercase tracking-[0.16em] text-neutral-500 dark:border-neutral-800 dark:text-neutral-400">
           {project.visibility}
         </p>
       </div>

@@ -17,6 +17,7 @@
 body {
   margin: 0;
   min-width: 320px;
+  overflow-x: clip;
   background: #ffffff;
   color: #050505;
 }
@@ -42,7 +43,7 @@ body {
   }
 
   .section-shell {
-    @apply mx-auto w-full max-w-page px-5 py-14 sm:px-8 sm:py-16 lg:px-10 lg:py-24;
+    @apply mx-auto w-full max-w-page px-4 py-12 min-[375px]:px-5 sm:px-8 sm:py-16 lg:px-10 lg:py-24;
   }
 
   .eyebrow {
@@ -150,6 +151,16 @@ button {
   transition-property: color, background-color, border-color, transform, opacity;
   transition-duration: 300ms;
   transition-timing-function: ease;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+@media (max-width: 420px) {
+  .eyebrow {
+    letter-spacing: 0.16em;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {

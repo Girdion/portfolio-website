@@ -36,29 +36,29 @@ export function Hero() {
   return (
     <section
       id="top"
-      className="section-shell animate-page-load grid min-h-[calc(100svh-73px)] content-center gap-14 lg:grid-cols-[1.08fr_0.92fr]"
+      className="section-shell animate-page-load grid min-h-[calc(100svh-73px)] content-center gap-10 sm:gap-14 lg:grid-cols-[1.08fr_0.92fr]"
     >
       <div className="max-w-3xl">
         <p className="eyebrow">{profile.location}</p>
-        <h1 className="mt-6 max-w-4xl text-5xl font-semibold tracking-[-0.045em] text-neutral-950 dark:text-white sm:text-6xl lg:text-7xl">
+        <h1 className="mt-6 max-w-4xl text-4xl font-semibold tracking-[-0.04em] text-neutral-950 dark:text-white min-[375px]:text-5xl sm:text-6xl lg:text-7xl">
           {profile.name}
         </h1>
-        <p className="mt-6 max-w-3xl text-2xl leading-tight tracking-[-0.02em] text-neutral-900 dark:text-neutral-100 sm:text-3xl">
+        <p className="mt-6 max-w-3xl text-xl leading-tight tracking-[-0.02em] text-neutral-900 dark:text-neutral-100 min-[375px]:text-2xl sm:text-3xl">
           {profile.title}
         </p>
-        <p className="mt-7 max-w-2xl text-lg leading-8 text-neutral-600 dark:text-neutral-300">
+        <p className="mt-7 max-w-2xl text-base leading-8 text-neutral-600 dark:text-neutral-300 sm:text-lg">
           {profile.hero}
         </p>
         <div className="mt-10">
           <a
             href={profile.cvUrl}
             download
-            className="focus-ring inline-flex w-fit items-center justify-center gap-3 whitespace-nowrap border border-neutral-950 bg-neutral-950 px-6 py-3 text-sm font-semibold uppercase tracking-[0.16em] text-white transition duration-300 hover:-translate-y-0.5 hover:bg-white hover:text-neutral-950 dark:border-white dark:bg-white dark:text-neutral-950 dark:hover:bg-neutral-950 dark:hover:text-white"
+            className="focus-ring inline-flex w-fit max-w-full items-center justify-center gap-3 whitespace-nowrap border border-neutral-950 bg-neutral-950 px-5 py-3 text-sm font-semibold uppercase tracking-[0.14em] text-white transition duration-300 hover:-translate-y-0.5 hover:bg-white hover:text-neutral-950 dark:border-white dark:bg-white dark:text-neutral-950 dark:hover:bg-neutral-950 dark:hover:text-white sm:px-6 sm:tracking-[0.16em]"
           >
             <FaDownload aria-hidden="true" className="h-4 w-4" />
             Download CV
           </a>
-          <div className="mt-5 flex items-center gap-4" aria-label="Social links">
+          <div className="mt-5 flex flex-wrap items-center gap-3 sm:gap-4" aria-label="Social links">
             {socialLinks.map(({ Icon, ...link }) => (
               <a
                 key={link.label}

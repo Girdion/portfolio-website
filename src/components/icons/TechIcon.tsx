@@ -75,7 +75,7 @@ export function TechLabel({ technology }: { technology: Technology }) {
 
   return (
     <span
-      className="inline-flex items-center gap-3 border border-neutral-200 px-3 py-2 text-sm text-neutral-700 dark:border-neutral-800 dark:text-neutral-300"
+      className="inline-flex min-w-0 max-w-full items-center gap-2 border border-neutral-200 px-3 py-2 text-sm text-neutral-700 dark:border-neutral-800 dark:text-neutral-300"
       title={meta.label}
     >
       <Icon aria-hidden="true" className="h-4 w-4 shrink-0" />

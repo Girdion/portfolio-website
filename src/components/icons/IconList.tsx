@@ -8,7 +8,7 @@ type IconListProps = {
 
 export function IconList({ showLabels = false, technologies }: IconListProps) {
   return (
-    <div className="flex flex-wrap gap-2" aria-label={showLabels ? 'Skills' : 'Technologies used'}>
+    <div className="flex min-w-0 flex-wrap gap-2" aria-label={showLabels ? 'Skills' : 'Technologies used'}>
       {technologies.map((technology) =>
         showLabels ? (
           <TechLabel key={technology} technology={technology} />
