@@ -53,8 +53,8 @@ function CodeSignal() {
         <div className="code-line code-line-delay-1 w-7/12" />
         <div className="code-line code-line-delay-2 w-10/12" />
         <p
-          className={`min-h-10 max-w-full break-words pt-2 leading-6 transition duration-300 sm:text-sm ${
-            isVisible ? 'translate-y-0 opacity-100' : 'translate-y-1 opacity-0'
+          className={`min-h-10 max-w-full break-words pt-2 leading-6 transition duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] sm:text-sm ${
+            isVisible ? 'translate-y-0 opacity-100' : 'translate-y-1.5 opacity-0'
           }`}
         >
           {heroPhrases[phraseIndex]}
@@ -71,21 +71,32 @@ export function Hero() {
       className="section-shell animate-page-load grid min-h-[calc(100svh-73px)] content-center gap-10 sm:gap-14 lg:grid-cols-[1.08fr_0.92fr]"
     >
       <div className="max-w-3xl">
-        <p className="eyebrow">{profile.location}</p>
-        <h1 className="mt-6 max-w-4xl text-4xl font-semibold tracking-[-0.04em] text-neutral-950 dark:text-white min-[375px]:text-5xl sm:text-6xl lg:text-7xl">
+        <p className="eyebrow stagger-in" style={{ animationDelay: '80ms' }}>
+          {profile.location}
+        </p>
+        <h1
+          className="stagger-in mt-6 max-w-4xl text-4xl font-semibold tracking-[-0.04em] text-neutral-950 dark:text-white min-[375px]:text-5xl sm:text-6xl lg:text-7xl"
+          style={{ animationDelay: '140ms' }}
+        >
           {profile.name}
         </h1>
-        <p className="mt-6 max-w-3xl text-xl leading-tight tracking-[-0.02em] text-neutral-900 dark:text-neutral-100 min-[375px]:text-2xl sm:text-3xl">
+        <p
+          className="stagger-in mt-6 max-w-3xl text-xl leading-tight tracking-[-0.02em] text-neutral-900 dark:text-neutral-100 min-[375px]:text-2xl sm:text-3xl"
+          style={{ animationDelay: '210ms' }}
+        >
           {profile.title}
         </p>
-        <p className="mt-7 max-w-2xl text-base leading-8 text-neutral-600 dark:text-neutral-300 sm:text-lg">
+        <p
+          className="stagger-in mt-7 max-w-2xl text-base leading-8 text-neutral-600 dark:text-neutral-300 sm:text-lg"
+          style={{ animationDelay: '280ms' }}
+        >
           {profile.hero}
         </p>
-        <div className="mt-10">
+        <div className="stagger-in mt-10" style={{ animationDelay: '350ms' }}>
           <a
             href={profile.cvUrl}
             download
-            className="focus-ring inline-flex w-fit max-w-full items-center justify-center gap-3 whitespace-nowrap border border-neutral-950 bg-neutral-950 px-5 py-3 text-sm font-semibold uppercase tracking-[0.14em] text-white transition duration-300 hover:-translate-y-0.5 hover:bg-white hover:text-neutral-950 dark:border-white dark:bg-white dark:text-neutral-950 dark:hover:bg-neutral-950 dark:hover:text-white sm:px-6 sm:tracking-[0.16em]"
+            className="focus-ring inline-flex w-fit max-w-full items-center justify-center gap-3 whitespace-nowrap border border-neutral-950 bg-neutral-950 px-5 py-3 text-sm font-semibold uppercase tracking-[0.14em] text-white transition duration-300 hover:-translate-y-0.5 hover:scale-[1.02] hover:bg-white hover:text-neutral-950 dark:border-white dark:bg-white dark:text-neutral-950 dark:hover:bg-neutral-950 dark:hover:text-white sm:px-6 sm:tracking-[0.16em]"
           >
             <FaDownload aria-hidden="true" className="h-4 w-4" />
             Download CV
@@ -95,7 +106,7 @@ export function Hero() {
               <a
                 key={link.label}
                 href={link.href}
-                className="focus-ring inline-flex h-9 w-9 items-center justify-center text-neutral-500 transition duration-300 hover:-translate-y-0.5 hover:text-neutral-950 dark:text-neutral-400 dark:hover:text-white"
+                className="focus-ring inline-flex h-9 w-9 items-center justify-center text-neutral-500 transition duration-300 hover:-translate-y-0.5 hover:scale-[1.06] hover:text-neutral-950 dark:text-neutral-400 dark:hover:text-white"
                 target={link.href.startsWith('http') ? '_blank' : undefined}
                 rel={link.href.startsWith('http') ? 'noreferrer' : undefined}
                 aria-label={link.label}

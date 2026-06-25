@@ -59,7 +59,7 @@ export function TechIcon({ technology }: { technology: Technology }) {
 
   return (
     <span
-      className="group relative inline-flex h-9 w-9 items-center justify-center border border-neutral-200 text-neutral-700 transition duration-300 hover:border-neutral-950 hover:text-neutral-950 dark:border-neutral-800 dark:text-neutral-300 dark:hover:border-white dark:hover:text-white"
+      className="group relative inline-flex h-9 w-9 items-center justify-center border border-neutral-200 text-neutral-700 transition duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-px hover:border-neutral-950 hover:bg-neutral-50 hover:text-neutral-950 dark:border-neutral-800 dark:text-neutral-300 dark:hover:border-white dark:hover:bg-neutral-900 dark:hover:text-white"
       aria-label={meta.label}
       title={meta.label}
     >
@@ -75,7 +75,7 @@ export function TechLabel({ technology }: { technology: Technology }) {
 
   return (
     <span
-      className="inline-flex min-w-0 max-w-full items-center gap-2 border border-neutral-200 px-3 py-2 text-sm text-neutral-700 dark:border-neutral-800 dark:text-neutral-300"
+      className="inline-flex min-w-0 max-w-full items-center gap-2 border border-neutral-200 px-3 py-2 text-sm text-neutral-700 transition duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-px hover:border-neutral-950 hover:bg-neutral-50 dark:border-neutral-800 dark:text-neutral-300 dark:hover:border-white dark:hover:bg-neutral-900"
       title={meta.label}
     >
       <Icon aria-hidden="true" className="h-4 w-4 shrink-0" />
@@ -87,7 +87,7 @@ export function TechLabel({ technology }: { technology: Technology }) {
 export function MicrosoftIcon({ label }: { label: string }) {
   return (
     <span
-      className="inline-flex h-9 w-9 items-center justify-center border border-neutral-200 text-neutral-700 dark:border-neutral-800 dark:text-neutral-300"
+      className="inline-flex h-9 w-9 items-center justify-center border border-neutral-200 text-neutral-700 transition duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-px hover:border-neutral-950 hover:bg-neutral-50 dark:border-neutral-800 dark:text-neutral-300 dark:hover:border-white dark:hover:bg-neutral-900"
       aria-label={label}
       title={label}
     >

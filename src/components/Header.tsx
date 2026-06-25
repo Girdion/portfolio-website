@@ -99,10 +99,10 @@ export function Header() {
                 key={item.href}
                 to={item.href}
                 className={({ isActive }) =>
-                  `focus-ring text-sm transition duration-300 hover:text-neutral-950 dark:hover:text-white ${
+                  `focus-ring relative py-1 text-sm transition duration-300 after:absolute after:inset-x-0 after:-bottom-1 after:h-px after:origin-left after:bg-current after:transition-transform after:duration-300 after:ease-[cubic-bezier(0.22,1,0.36,1)] hover:text-neutral-950 dark:hover:text-white ${
                     isActive && item.href === '/projects'
-                      ? 'text-neutral-950 dark:text-white'
-                      : 'text-neutral-600 dark:text-neutral-300'
+                      ? 'text-neutral-950 after:scale-x-100 dark:text-white'
+                      : 'text-neutral-600 after:scale-x-0 hover:after:scale-x-100 dark:text-neutral-300'
                   }`
                 }
               >
@@ -114,7 +114,7 @@ export function Header() {
           <button
             ref={openButtonRef}
             type="button"
-            className="focus-ring inline-flex h-10 w-10 items-center justify-center text-neutral-950 dark:text-white md:hidden"
+            className="focus-ring inline-flex h-10 w-10 items-center justify-center text-neutral-950 hover:-translate-y-0.5 hover:scale-[1.02] dark:text-white md:hidden"
             aria-label="Open navigation menu"
             aria-controls="mobile-navigation"
             aria-expanded={isMenuOpen}
@@ -132,7 +132,7 @@ export function Header() {
       <div
         id="mobile-navigation"
         ref={menuRef}
-        className={`fixed inset-0 z-[70] flex h-svh min-h-svh overscroll-contain flex-col overflow-y-auto bg-white px-5 py-5 text-neutral-950 transition-transform duration-500 ease-out dark:bg-neutral-950 dark:text-white md:hidden ${
+        className={`fixed inset-0 z-[70] flex h-svh min-h-svh overscroll-contain flex-col overflow-y-auto bg-white px-5 py-5 text-neutral-950 transition-transform duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] dark:bg-neutral-950 dark:text-white md:hidden ${
           isMenuOpen ? 'translate-y-0' : '-translate-y-full pointer-events-none'
         }`}
         aria-hidden={!isMenuOpen}
@@ -150,7 +150,7 @@ export function Header() {
           </Link>
           <button
             type="button"
-            className="focus-ring inline-flex h-11 w-11 items-center justify-center text-neutral-950 dark:text-white"
+            className="focus-ring inline-flex h-11 w-11 items-center justify-center text-neutral-950 hover:-translate-y-0.5 hover:scale-[1.02] dark:text-white"
             aria-label="Close navigation menu"
             onClick={() => {
               setIsMenuOpen(false);
@@ -169,7 +169,7 @@ export function Header() {
             <NavLink
               key={item.href}
               to={item.href}
-              className="focus-ring border-b border-neutral-200 py-5 text-3xl font-semibold tracking-[-0.03em] text-neutral-950 dark:border-neutral-800 dark:text-white"
+              className="focus-ring border-b border-neutral-200 py-5 text-3xl font-semibold tracking-[-0.03em] text-neutral-950 transition hover:translate-x-1 dark:border-neutral-800 dark:text-white"
               onClick={() => setIsMenuOpen(false)}
             >
               {item.label}

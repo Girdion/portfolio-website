@@ -8,7 +8,7 @@ type ProjectCardProps = {
 
 export function ProjectCard({ project }: ProjectCardProps) {
   return (
-    <article className="flex h-full min-w-0 flex-col border border-neutral-200 bg-white p-5 dark:border-neutral-800 dark:bg-neutral-950 sm:p-8">
+    <article className="flex h-full min-w-0 flex-col border border-neutral-200 bg-white p-5 transition duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-0.5 hover:border-neutral-950 hover:shadow-[0_12px_28px_rgba(0,0,0,0.06)] dark:border-neutral-800 dark:bg-neutral-950 dark:hover:border-white dark:hover:shadow-[0_12px_28px_rgba(255,255,255,0.04)] sm:p-8">
       <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between sm:gap-6">
         <div>
           <p className="text-xs uppercase tracking-[0.18em] text-neutral-500 dark:text-neutral-400">
@@ -43,7 +43,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
           {project.githubUrl ? (
             <a
               href={project.githubUrl}
-              className="focus-ring inline-flex items-center gap-2 text-sm font-medium text-neutral-950 hover:opacity-60 dark:text-white"
+              className="focus-ring inline-flex items-center gap-2 text-sm font-medium text-neutral-950 hover:-translate-y-px hover:opacity-70 dark:text-white"
               target="_blank"
               rel="noreferrer"
             >
@@ -54,7 +54,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
           {project.liveDemoUrl ? (
             <a
               href={project.liveDemoUrl}
-              className="focus-ring text-sm font-medium text-neutral-950 hover:opacity-60 dark:text-white"
+              className="focus-ring text-sm font-medium text-neutral-950 hover:-translate-y-px hover:opacity-70 dark:text-white"
               target="_blank"
               rel="noreferrer"
             >
