@@ -6,8 +6,10 @@ import {
   SiDotnet,
   SiGit,
   SiGithub,
+  SiGitlab,
   SiGo,
   SiJavascript,
+  SiMongodb,
   SiMui,
   SiNextdotjs,
   SiNginx,
@@ -16,12 +18,13 @@ import {
   SiPython,
   SiReact,
   SiRedis,
+  SiRedux,
   SiSharp,
   SiSonarqubeserver,
   SiTailwindcss,
   SiTypescript,
 } from 'react-icons/si';
-import { TbBrandAzure, TbDatabase } from 'react-icons/tb';
+import { TbBrandAzure, TbComponents, TbDatabase, TbNetwork } from 'react-icons/tb';
 import type { Technology } from '../../data/projects';
 
 type IconMeta = {
@@ -37,8 +40,12 @@ const iconMap: Record<Technology, IconMeta> = {
   docker: { label: 'Docker', Icon: SiDocker },
   git: { label: 'Git', Icon: SiGit },
   github: { label: 'GitHub', Icon: SiGithub },
+  gitlab: { label: 'GitLab', Icon: SiGitlab },
   go: { label: 'Go', Icon: SiGo },
   javascript: { label: 'JavaScript', Icon: SiJavascript },
+  microfrontend: { label: 'Micro-frontend', Icon: TbComponents },
+  microservices: { label: 'Microservices', Icon: TbNetwork },
+  mongodb: { label: 'MongoDB', Icon: SiMongodb },
   mui: { label: 'Material UI', Icon: SiMui },
   nextjs: { label: 'Next.js', Icon: SiNextdotjs },
   nginx: { label: 'Nginx', Icon: SiNginx },
@@ -47,6 +54,7 @@ const iconMap: Record<Technology, IconMeta> = {
   python: { label: 'Python', Icon: SiPython },
   react: { label: 'React', Icon: SiReact },
   redis: { label: 'Redis', Icon: SiRedis },
+  redux: { label: 'Redux', Icon: SiRedux },
   sonarqube: { label: 'SonarQube', Icon: SiSonarqubeserver },
   sqlserver: { label: 'SQL Server', Icon: TbDatabase },
   tailwind: { label: 'Tailwind CSS', Icon: SiTailwindcss },

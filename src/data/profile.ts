@@ -76,14 +76,14 @@ export const skillGroups: SkillGroup[] = [
   },
   {
     label: 'Frontend',
-    items: ['react', 'typescript', 'javascript', 'tailwind', 'mui', 'nextjs'],
+    items: ['react', 'redux', 'typescript', 'javascript', 'tailwind', 'mui', 'nextjs'],
   },
   {
     label: 'Data and Systems',
-    items: ['sqlserver', 'postgresql', 'redis', 'docker'],
+    items: ['mongodb', 'postgresql', 'redis', 'docker'],
   },
   {
     label: 'Engineering Practice',
-    items: ['sonarqube', 'git', 'github', 'bitbucket', 'postman', 'nginx'],
+    items: ['microservices', 'microfrontend', 'sonarqube', 'git', 'github', 'gitlab', 'bitbucket', 'postman', 'nginx'],
   },
 ];
