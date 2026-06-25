@@ -37,6 +37,10 @@ body {
 }
 
 @layer components {
+  .skip-link {
+    @apply focus-ring fixed left-5 top-5 z-[60] -translate-y-24 bg-white px-4 py-3 text-sm font-semibold uppercase tracking-[0.14em] text-neutral-950 shadow-sm transition-transform focus-visible:translate-y-0 dark:bg-neutral-950 dark:text-white;
+  }
+
   .section-shell {
     @apply mx-auto w-full max-w-page px-5 py-14 sm:px-8 sm:py-16 lg:px-10 lg:py-24;
   }

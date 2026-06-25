@@ -10,8 +10,11 @@ import { Skills } from './components/Skills';
 function App() {
   return (
     <div className="min-h-screen bg-white font-sans text-neutral-950 dark:bg-neutral-950 dark:text-white">
+      <a href="#main" className="skip-link">
+        Skip to content
+      </a>
       <Header />
-      <main>
+      <main id="main">
         <Hero />
         <About />
         <Experience />
