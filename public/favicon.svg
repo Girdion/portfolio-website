@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Jonathan Djoko monogram">
+  <rect width="64" height="64" fill="#050505"/>
+  <path d="M20 20h16v14c0 7-4 11-10 11-3 0-6-1-8-3l3-5c1 1 3 2 5 2 3 0 5-2 5-6v-8H20v-5Z" fill="#fff"/>
+  <path d="M40 20h5v24h-5V20Z" fill="#fff"/>
+</svg>
