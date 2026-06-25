@@ -87,17 +87,6 @@ body {
   }
 }
 
-@keyframes cursor-blink {
-  0%,
-  45% {
-    opacity: 1;
-  }
-  46%,
-  100% {
-    opacity: 0;
-  }
-}
-
 .animate-fade-in {
   animation: fade-in 500ms ease-out both;
 }
@@ -142,9 +131,6 @@ body {
   animation-delay: 1200ms;
 }
 
-.cursor-blink {
-  animation: cursor-blink 1.15s steps(1, end) infinite;
-}
 
 a,
 button {
@@ -153,8 +139,9 @@ button {
   transition-timing-function: ease;
 }
 
-.overflow-hidden {
+.menu-scroll-lock {
   overflow: hidden;
+  touch-action: none;
 }
 
 @media (max-width: 420px) {
@@ -175,5 +162,9 @@ button {
 
   .section-reveal {
     animation-timeline: auto;
+  }
+
+  .code-line {
+    animation: none !important;
   }
 }

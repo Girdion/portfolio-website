@@ -16,6 +16,7 @@ export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
   const openButtonRef = useRef<HTMLButtonElement>(null);
+  const scrollPositionRef = useRef(0);
   const location = useLocation();
 
   useEffect(() => {
@@ -23,11 +24,29 @@ export function Header() {
   }, [location.pathname, location.hash]);
 
   useEffect(() => {
-    document.body.classList.toggle('overflow-hidden', isMenuOpen);
+    const releaseScroll = () => {
+      const scrollY = scrollPositionRef.current;
+      document.body.classList.remove('menu-scroll-lock');
+      document.body.style.position = '';
+      document.body.style.top = '';
+      document.body.style.left = '';
+      document.body.style.right = '';
+      document.body.style.width = '';
+      window.scrollTo(0, scrollY);
+    };
 
     if (!isMenuOpen) {
+      releaseScroll();
       return;
     }
+
+    scrollPositionRef.current = window.scrollY;
+    document.body.classList.add('menu-scroll-lock');
+    document.body.style.position = 'fixed';
+    document.body.style.top = `-${scrollPositionRef.current}px`;
+    document.body.style.left = '0';
+    document.body.style.right = '0';
+    document.body.style.width = '100%';
 
     const menu = menuRef.current;
     const focusable = menu ? Array.from(menu.querySelectorAll<HTMLElement>(focusableSelector)) : [];
@@ -59,8 +78,8 @@ export function Header() {
     document.addEventListener('keydown', handleKeyDown);
 
     return () => {
-      document.body.classList.remove('overflow-hidden');
       document.removeEventListener('keydown', handleKeyDown);
+      releaseScroll();
     };
   }, [isMenuOpen]);
 
@@ -113,7 +132,7 @@ export function Header() {
       <div
         id="mobile-navigation"
         ref={menuRef}
-        className={`fixed inset-0 z-[70] flex min-h-svh flex-col bg-white px-5 py-5 text-neutral-950 transition-transform duration-500 ease-out dark:bg-neutral-950 dark:text-white md:hidden ${
+        className={`fixed inset-0 z-[70] flex h-svh min-h-svh overscroll-contain flex-col overflow-y-auto bg-white px-5 py-5 text-neutral-950 transition-transform duration-500 ease-out dark:bg-neutral-950 dark:text-white md:hidden ${
           isMenuOpen ? 'translate-y-0' : '-translate-y-full pointer-events-none'
         }`}
         aria-hidden={!isMenuOpen}

@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react';
 import { profile } from '../data/profile';
 import { FaDownload, FaEnvelope, FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa6';
 
@@ -8,7 +9,35 @@ const socialLinks = [
   { label: 'Instagram', href: profile.instagram, Icon: FaInstagram },
 ];
 
+const heroPhrases = [
+  'Building software that people actually use.',
+  'Exploring backend systems.',
+  'Learning one thing at a time.',
+  'Trying not to break production.',
+];
+
 function CodeSignal() {
+  const [phraseIndex, setPhraseIndex] = useState(0);
+  const [isVisible, setIsVisible] = useState(true);
+
+  useEffect(() => {
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    if (prefersReducedMotion) {
+      return;
+    }
+
+    const interval = window.setInterval(() => {
+      setIsVisible(false);
+      window.setTimeout(() => {
+        setPhraseIndex((index) => (index + 1) % heroPhrases.length);
+        setIsVisible(true);
+      }, 220);
+    }, 3200);
+
+    return () => window.clearInterval(interval);
+  }, []);
+
   return (
     <div
       className="code-card mt-10 border border-neutral-200 p-4 dark:border-neutral-800 sm:p-5"
@@ -23,9 +52,12 @@ function CodeSignal() {
         <div className="code-line w-9/12" />
         <div className="code-line code-line-delay-1 w-7/12" />
         <div className="code-line code-line-delay-2 w-10/12" />
-        <p className="pt-2">
-          build(usefulSystems)
-          <span className="cursor-blink ml-1 inline-block h-4 w-px translate-y-0.5 bg-neutral-950 dark:bg-white" />
+        <p
+          className={`min-h-10 max-w-full break-words pt-2 leading-6 transition duration-300 sm:text-sm ${
+            isVisible ? 'translate-y-0 opacity-100' : 'translate-y-1 opacity-0'
+          }`}
+        >
+          {heroPhrases[phraseIndex]}
         </p>
       </div>
     </div>
