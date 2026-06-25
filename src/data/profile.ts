@@ -21,6 +21,8 @@ export const profile = {
   email: 'jonathandjoko28@gmail.com',
   phone: '+6281253735427',
   linkedin: 'https://linkedin.com/in/jonathandjoko',
+  github: 'https://github.com/Girdion',
+  instagram: 'https://www.instagram.com/jonathandjoko/',
   cvUrl: '/files/jonathan-djoko-cv.pdf',
   hero:
     'I build reliable APIs, SQL-backed systems, and enterprise workflows, with production experience across banking and insurance.',

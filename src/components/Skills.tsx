@@ -16,7 +16,7 @@ export function Skills() {
             <div key={group.label} className="border-t border-neutral-950 pt-5 dark:border-white">
               <h3 className="text-lg font-semibold text-neutral-950 dark:text-white">{group.label}</h3>
               <div className="mt-4">
-                <IconList technologies={group.items} />
+                <IconList showLabels technologies={group.items} />
               </div>
             </div>
           ))}

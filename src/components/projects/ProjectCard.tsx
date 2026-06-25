@@ -8,7 +8,7 @@ type ProjectCardProps = {
 
 export function ProjectCard({ project }: ProjectCardProps) {
   return (
-    <article className="flex h-full flex-col bg-white p-6 dark:bg-neutral-950 sm:p-8">
+    <article className="flex h-full flex-col border border-neutral-200 bg-white p-6 dark:border-neutral-800 dark:bg-neutral-950 sm:p-8">
       <div className="flex items-start justify-between gap-6">
         <div>
           <p className="text-xs uppercase tracking-[0.18em] text-neutral-500 dark:text-neutral-400">

@@ -1,4 +1,12 @@
 import { profile } from '../data/profile';
+import { FaDownload, FaEnvelope, FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa6';
+
+const socialLinks = [
+  { label: 'GitHub', href: profile.github, Icon: FaGithub },
+  { label: 'LinkedIn', href: profile.linkedin, Icon: FaLinkedin },
+  { label: 'Email', href: `mailto:${profile.email}`, Icon: FaEnvelope },
+  { label: 'Instagram', href: profile.instagram, Icon: FaInstagram },
+];
 
 function CodeSignal() {
   return (
@@ -41,26 +49,30 @@ export function Hero() {
         <p className="mt-7 max-w-2xl text-lg leading-8 text-neutral-600 dark:text-neutral-300">
           {profile.hero}
         </p>
-        <div className="mt-10 flex flex-col gap-3 sm:flex-row">
-          <a
-            href="#contact"
-            className="focus-ring inline-flex justify-center border border-neutral-950 bg-neutral-950 px-6 py-3 text-sm font-semibold uppercase tracking-[0.16em] text-white transition duration-300 hover:-translate-y-0.5 hover:bg-white hover:text-neutral-950 dark:border-white dark:bg-white dark:text-neutral-950 dark:hover:bg-neutral-950 dark:hover:text-white"
-          >
-            Contact
-          </a>
-          <a
-            href="#experience"
-            className="focus-ring inline-flex justify-center border border-neutral-950 px-6 py-3 text-sm font-semibold uppercase tracking-[0.16em] text-neutral-950 transition duration-300 hover:-translate-y-0.5 hover:bg-neutral-950 hover:text-white dark:border-white dark:text-white dark:hover:bg-white dark:hover:text-neutral-950"
-          >
-            View Experience
-          </a>
+        <div className="mt-10">
           <a
             href={profile.cvUrl}
             download
-            className="focus-ring inline-flex justify-center border border-neutral-300 px-6 py-3 text-sm font-semibold uppercase tracking-[0.16em] text-neutral-700 transition duration-300 hover:-translate-y-0.5 hover:border-neutral-950 hover:text-neutral-950 dark:border-neutral-700 dark:text-neutral-300 dark:hover:border-white dark:hover:text-white"
+            className="focus-ring inline-flex w-fit items-center justify-center gap-3 whitespace-nowrap border border-neutral-950 bg-neutral-950 px-6 py-3 text-sm font-semibold uppercase tracking-[0.16em] text-white transition duration-300 hover:-translate-y-0.5 hover:bg-white hover:text-neutral-950 dark:border-white dark:bg-white dark:text-neutral-950 dark:hover:bg-neutral-950 dark:hover:text-white"
           >
+            <FaDownload aria-hidden="true" className="h-4 w-4" />
             Download CV
           </a>
+          <div className="mt-5 flex items-center gap-4" aria-label="Social links">
+            {socialLinks.map(({ Icon, ...link }) => (
+              <a
+                key={link.label}
+                href={link.href}
+                className="focus-ring inline-flex h-9 w-9 items-center justify-center text-neutral-500 transition duration-300 hover:-translate-y-0.5 hover:text-neutral-950 dark:text-neutral-400 dark:hover:text-white"
+                target={link.href.startsWith('http') ? '_blank' : undefined}
+                rel={link.href.startsWith('http') ? 'noreferrer' : undefined}
+                aria-label={link.label}
+                title={link.label}
+              >
+                <Icon aria-hidden="true" className="h-4 w-4" />
+              </a>
+            ))}
+          </div>
         </div>
       </div>
 

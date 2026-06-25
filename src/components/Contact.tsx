@@ -1,9 +1,11 @@
 import { profile } from '../data/profile';
-import { FaEnvelope, FaLinkedin } from 'react-icons/fa6';
+import { FaEnvelope, FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa6';
 
 const links = [
   { label: 'Email', href: `mailto:${profile.email}`, Icon: FaEnvelope },
+  { label: 'GitHub', href: profile.github, Icon: FaGithub },
   { label: 'LinkedIn', href: profile.linkedin, Icon: FaLinkedin },
+  { label: 'Instagram', href: profile.instagram, Icon: FaInstagram },
 ];
 
 export function Contact() {
@@ -17,15 +19,8 @@ export function Contact() {
               Open to backend, full stack, and software engineering roles.
             </h2>
             <p className="mt-6 max-w-2xl text-lg leading-8 text-neutral-600 dark:text-neutral-300">
-              I am especially interested in teams building reliable APIs, data-heavy products, enterprise systems, and workflow platforms. GitHub and additional project links can be added when public repositories are ready.
+              I am especially interested in teams building reliable APIs, data-heavy products, enterprise systems, and workflow platforms.
             </p>
-            <a
-              href={profile.cvUrl}
-              download
-              className="focus-ring mt-8 inline-flex border border-neutral-950 px-5 py-3 text-sm font-semibold uppercase tracking-[0.16em] text-neutral-950 hover:-translate-y-0.5 hover:bg-neutral-950 hover:text-white dark:border-white dark:text-white dark:hover:bg-white dark:hover:text-neutral-950"
-            >
-              Download CV
-            </a>
           </div>
           <address className="not-italic">
             <div className="space-y-3">

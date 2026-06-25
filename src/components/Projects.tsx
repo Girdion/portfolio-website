@@ -9,11 +9,11 @@ export function Projects() {
       <div className="section-shell">
         <SectionHeading
           eyebrow="Projects"
-          title="A short preview of systems work."
-          description="A few representative projects are shown here. The full projects page is structured for easy scanning and future additions."
+          title="Projects I've Built"
+          description="A collection of systems, applications, and technical work I've built, maintained, and improved throughout my journey as a software engineer."
         />
 
-        <div className="grid gap-px bg-neutral-200 dark:bg-neutral-800 md:grid-cols-2">
+        <div className="grid gap-5 md:grid-cols-2">
           {featuredProjects.map((project) => (
             <ProjectCard key={project.title} project={project} />
           ))}

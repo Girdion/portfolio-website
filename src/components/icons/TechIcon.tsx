@@ -70,6 +70,21 @@ export function TechIcon({ technology }: { technology: Technology }) {
   );
 }
 
+export function TechLabel({ technology }: { technology: Technology }) {
+  const meta = iconMap[technology];
+  const { Icon } = meta;
+
+  return (
+    <span
+      className="inline-flex items-center gap-3 border border-neutral-200 px-3 py-2 text-sm text-neutral-700 dark:border-neutral-800 dark:text-neutral-300"
+      title={meta.label}
+    >
+      <Icon aria-hidden="true" className="h-4 w-4 shrink-0" />
+      <span>{meta.label}</span>
+    </span>
+  );
+}
+
 export function MicrosoftIcon({ label }: { label: string }) {
   return (
     <span
