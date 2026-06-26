@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useLayoutEffect, useRef, useState } from 'react';
 import { Link, NavLink, useLocation } from 'react-router-dom';
 import { ThemeToggle } from './ThemeToggle';
 
@@ -17,22 +17,32 @@ export function Header() {
   const menuRef = useRef<HTMLDivElement>(null);
   const openButtonRef = useRef<HTMLButtonElement>(null);
   const scrollPositionRef = useRef(0);
+  const isScrollLockedRef = useRef(false);
   const location = useLocation();
 
   useEffect(() => {
     setIsMenuOpen(false);
   }, [location.pathname, location.hash]);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     const releaseScroll = () => {
+      if (!isScrollLockedRef.current) {
+        return;
+      }
+
       const scrollY = scrollPositionRef.current;
+      const previousScrollBehavior = document.documentElement.style.scrollBehavior;
+
+      document.documentElement.style.scrollBehavior = 'auto';
       document.body.classList.remove('menu-scroll-lock');
       document.body.style.position = '';
       document.body.style.top = '';
       document.body.style.left = '';
       document.body.style.right = '';
       document.body.style.width = '';
-      window.scrollTo(0, scrollY);
+      window.scrollTo({ top: scrollY, left: 0, behavior: 'auto' });
+      document.documentElement.style.scrollBehavior = previousScrollBehavior;
+      isScrollLockedRef.current = false;
     };
 
     if (!isMenuOpen) {
@@ -41,6 +51,7 @@ export function Header() {
     }
 
     scrollPositionRef.current = window.scrollY;
+    isScrollLockedRef.current = true;
     document.body.classList.add('menu-scroll-lock');
     document.body.style.position = 'fixed';
     document.body.style.top = `-${scrollPositionRef.current}px`;
