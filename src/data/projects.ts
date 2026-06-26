@@ -43,7 +43,7 @@ export const projects: Project[] = [
     category: 'Banking platform',
     description:
       'Enterprise banking platform supporting application processing, monitoring, and reporting for housing subsidy financing workflows.',
-    technologies: ['aspnet', 'csharp', 'sqlserver', 'javascript'],
+    technologies: ['csharp', 'aspnet','javascript', 'sqlserver'],
     achievements: [
       'Implemented backend features and maintained ASP.NET MVC functionality.',
       'Resolved production issues across reporting and data flows.',
@@ -56,7 +56,7 @@ export const projects: Project[] = [
     category: 'Enterprise workflow app',
     description:
       'Internal employee platform for reimbursements, approval workflows, service requests, and day-to-day company operations.',
-    technologies: ['react', 'javascript', 'tailwind', 'azure'],
+    technologies: ['react', 'javascript', 'tailwind', 'mui', 'csharp', 'aspnet', 'sqlserver'],
     achievements: [
       'Built responsive interfaces for multi-step request workflows.',
       'Implemented validation logic and backend API integration.',
@@ -69,7 +69,7 @@ export const projects: Project[] = [
     category: 'Queue management system',
     description:
       'Queue management system for insurance branch offices, supporting customer check-ins, frontliner status, real-time monitoring, and TV display views.',
-    technologies: ['react', 'javascript', 'mui', 'aspnet', 'nginx'],
+    technologies: ['react', 'javascript', 'tailwind', 'mui', 'nginx'],
     achievements: [
       'Built real-time dashboard and queue status interfaces.',
       'Integrated APIs for check-in, walk-in services, and frontliner status tracking.',

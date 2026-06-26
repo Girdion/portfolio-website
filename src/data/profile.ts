@@ -65,14 +65,14 @@ export const experiences: Experience[] = [
       'Built queue management interfaces for branch offices, including real-time dashboards, TV display views, frontliner status, and automated queue announcements.',
       'Contributed to micro-frontend architecture and deployment using Nginx.',
     ],
-    stack: ['javascript', 'react', 'tailwind', 'mui', 'git'],
+    stack: ['react', 'javascript', 'tailwind', 'mui', 'git'],
   },
 ];
 
 export const skillGroups: SkillGroup[] = [
   {
     label: 'Backend',
-    items: ['csharp', 'aspnet', 'sqlserver', 'go', 'python'],
+    items: ['csharp', 'aspnet', 'go', 'python', 'sqlserver'],
   },
   {
     label: 'Frontend',
