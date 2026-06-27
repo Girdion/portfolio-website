@@ -27,9 +27,9 @@ export const profile = {
   hero:
     'I build reliable APIs, SQL-backed systems, and enterprise workflows, with a growing interest in Go-based backend development.',
   intro: [
-    'I am drawn to software engineering because it sits between logic and usefulness: small decisions in code can make work clearer, faster, and less frustrating for real people.',
-    'I like learning new technologies, taking systems apart to understand them, and bringing a sense of creativity from art and music into how I think about product and engineering problems.',
-    'Long term, I want to build meaningful products with teams that care about reliability, craft, and continuous improvement.',
+  'I enjoy building software that solves real problems through thoughtful engineering.',
+  'I am naturally curious and enjoy learning new technologies, understanding how systems work, and continuously improving my craft.',
+  'Long term, I want to build meaningful products with teams that value quality, collaboration, and continuous learning.',
   ],
   about:
     'I am a software engineer focused on backend and full stack roles where reliability, clear data flows, and practical product delivery matter. My experience spans enterprise banking systems, insurance operations platforms, production issue investigation, SQL optimization, ASP.NET modernization, secure authentication, and React-based internal tools. I am also interested in growing toward Go-based backend engineering roles.',
