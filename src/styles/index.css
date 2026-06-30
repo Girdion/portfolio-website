@@ -87,6 +87,35 @@ body {
   }
 }
 
+@keyframes splash-mark {
+  from {
+    transform: scaleX(0);
+    opacity: 0;
+  }
+  to {
+    transform: scaleX(1);
+    opacity: 1;
+  }
+}
+
+.splash-screen {
+  animation: fade-in 260ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.splash-screen-exit {
+  pointer-events: none;
+  opacity: 0;
+  transform: translateY(-8px);
+  transition:
+    opacity 360ms cubic-bezier(0.22, 1, 0.36, 1),
+    transform 360ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.splash-mark {
+  transform-origin: center;
+  animation: splash-mark 520ms cubic-bezier(0.22, 1, 0.36, 1) 140ms both;
+}
+
 .animate-fade-in {
   animation: fade-in 500ms ease-out both;
 }
