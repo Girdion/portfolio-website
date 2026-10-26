@@ -39,31 +39,32 @@ export const profile = {
 
 export const experiences: Experience[] = [
   {
-    company: 'Bank Negara Indonesia',
-    role: 'Backend Developer',
-    period: 'Apr 2026 - Present',
+    company: 'PT Bank Negara Indonesia (Persero) Tbk.',
+    role: 'Backend Engineer',
+    period: 'Apr 2026 - Dec 2026',
     summary:
-      'Working on enterprise banking applications with a focus on SQL-backed reporting, production debugging, security remediation, and backend maintainability.',
+      'Engineered and enhanced business-critical backend services and REST APIs for a housing subsidy platform serving 2,000+ branches and 15+ user roles.',
     bullets: [
-      'Optimized a critical SQL query and stored procedure, reducing average report response time by approximately 92%, from around 40 seconds to under 3 seconds.',
-      'Investigated production data issues by debugging SQL joins, stored procedures, and cross-system integration flows.',
-      'Integrated SonarQube for .NET Framework applications and remediated SAST/DAST findings to improve security and code quality compliance.',
-      'Contributed to ASP.NET modernization and migration work across enterprise banking systems.',
+      'Integrated the platform with Tapera, a government service, using C#, .NET, Dapper, and SQL Server.',
+      'Optimized report-generation queries and stored procedures, cutting load time from several minutes to approximately 0-5 seconds and resolving recurring production timeouts.',
+      'Owned Developer on Duty investigations, tracing data inconsistencies and service failures across application logic, SQL queries, stored procedures, and system integrations.',
+      'Built database-backed logging for Tapera integration calls, speeding up production troubleshooting and reducing dependency on other teams for logs.',
+      'Integrated SonarQube and remediated 10+ SAST/DAST findings across .NET Framework applications.',
     ],
     stack: ['csharp', 'aspnet', 'sqlserver', 'git'],
   },
   {
     company: 'Asuransi Astra Buana',
-    role: 'Frontend Developer Intern',
+    role: 'Application Developer Intern',
     period: 'Mar 2025 - Mar 2026',
     summary:
-      'Built enterprise internal applications for employee services, approval workflows, branch queue management, dashboards, and secure authentication flows.',
+      'Built internal applications for employee services, approval workflows, branch operations, and secure authentication flows.',
     bullets: [
-      'Built responsive React, Redux, and Tailwind CSS interfaces for RIANG, an employee super app supporting reimbursements, approvals, service requests, and internal operations.',
-      'Owned request modules for reimbursement, office car, and meeting snack workflows, including multi-step forms, validation logic, and backend API integration.',
-      'Integrated multi-factor authentication using Microsoft Identity and Azure for secure login flows.',
-      'Built queue management interfaces for branch offices, including real-time dashboards, TV display views, frontliner status, and automated queue announcements.',
-      'Contributed to micro-frontend architecture and deployment using Nginx.',
+      'Built responsive React, Redux, and Tailwind CSS interfaces for RIANG, an employee super app used by 1,500+ employees.',
+      'Owned end-to-end development of reimbursement, office car, and snack-meeting modules, including multi-step forms and approval workflows integrated with RIANG OPEX.',
+      'Built a branch-office queue management system from scratch, replacing a manual process and reducing frontliner idle time by 87.5%.',
+      'Engineered 5+ C# (ASP.NET) APIs for customer check-in, walk-in services, and frontliner status tracking; deployed with a micro-frontend architecture on Nginx.',
+      'Integrated multi-factor authentication with Microsoft Identity and Azure for secure login.',
     ],
     stack: ['react', 'javascript', 'tailwind', 'mui', 'git'],
   },

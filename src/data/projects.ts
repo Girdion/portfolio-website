@@ -34,7 +34,7 @@ export type Project = {
   achievements: string[];
   githubUrl?: string;
   liveDemoUrl?: string;
-  visibility: 'Public' | 'Professional';
+  visibility: 'Personal' | 'Professional';
 };
 
 export const projects: Project[] = [
@@ -42,12 +42,12 @@ export const projects: Project[] = [
     title: 'BNI Housing Subsidy Financing Platform',
     category: 'Banking platform',
     description:
-      'Enterprise banking platform supporting application processing, monitoring, and reporting for housing subsidy financing workflows.',
-    technologies: ['csharp', 'aspnet','javascript', 'sqlserver'],
+      'Business-critical housing subsidy platform serving 2,000+ branches and 15+ user roles, with application processing, monitoring, reporting, and Tapera integration.',
+    technologies: ['csharp', 'aspnet', 'javascript', 'sqlserver'],
     achievements: [
-      'Implemented backend features and maintained ASP.NET MVC functionality.',
-      'Resolved production issues across reporting and data flows.',
-      'Optimized report generation from approximately 40 seconds to under 3 seconds.',
+      'Engineered backend services and REST APIs using C#, .NET, Dapper, and SQL Server.',
+      'Reduced report-generation load time from several minutes to approximately 0-5 seconds, resolving recurring production timeouts.',
+      'Built database-backed logging for Tapera calls to speed up production investigation.',
     ],
     visibility: 'Professional',
   },
@@ -55,12 +55,12 @@ export const projects: Project[] = [
     title: 'RIANG Employee Super App',
     category: 'Enterprise workflow app',
     description:
-      'Internal employee platform for reimbursements, approval workflows, service requests, and day-to-day company operations.',
+      'Internal employee super app used by 1,500+ people for reimbursements, approvals, service requests, and operational workflows.',
     technologies: ['react', 'javascript', 'tailwind', 'mui', 'csharp', 'aspnet', 'sqlserver'],
     achievements: [
-      'Built responsive interfaces for multi-step request workflows.',
-      'Implemented validation logic and backend API integration.',
-      'Supported secure login through Microsoft Identity and Azure MFA.',
+      'Built responsive React, Redux, and Tailwind CSS interfaces for multi-step employee requests.',
+      'Owned reimbursement, office car, and snack-meeting modules integrated with RIANG OPEX finance workflows.',
+      'Integrated multi-factor authentication with Microsoft Identity and Azure for secure login.',
     ],
     visibility: 'Professional',
   },
@@ -68,27 +68,27 @@ export const projects: Project[] = [
     title: 'Service Traffic System',
     category: 'Queue management system',
     description:
-      'Queue management system for insurance branch offices, supporting customer check-ins, frontliner status, real-time monitoring, and TV display views.',
+      'Branch-office queue management system built from scratch to replace manual customer check-in, frontliner-status, and monitoring workflows.',
     technologies: ['react', 'javascript', 'tailwind', 'mui', 'nginx'],
     achievements: [
-      'Built real-time dashboard and queue status interfaces.',
-      'Integrated APIs for check-in, walk-in services, and frontliner status tracking.',
-      'Developed TV display views and automated voice announcement flows.',
+      'Reduced frontliner idle time by 87.5% with real-time dashboards and TV display views.',
+      'Engineered 5+ C# (ASP.NET) APIs for check-in, walk-in services, and frontliner status tracking.',
+      'Deployed through a micro-frontend architecture on Nginx.',
     ],
     visibility: 'Professional',
   },
   {
-    title: 'Asuransi Astra Anniversary Digital Display',
-    category: 'Event display system',
+    title: 'Offerly',
+    category: 'Backend job application platform',
     description:
-      'Interactive large-screen display application presented on an 80-inch LED screen during Asuransi Astra’s corporate anniversary event.',
-    technologies: ['react', 'typescript', 'tailwind'],
+      'A Go backend application for managing job applications, focused on RESTful API design and relational data modeling.',
+    technologies: ['go', 'postgresql', 'redis', 'docker'],
     achievements: [
-      'Built dynamic attendance and employee birthday visualization components.',
-      'Optimized layout and rendering for an 80-inch LED display.',
-      'Rendered real-time data to support participant engagement during the event.',
+      'Developing the API with Go (Gin) and PostgreSQL for job application management.',
+      'Building a modular architecture designed for caching, asynchronous processing, and file management.',
+      'Planning Redis, RabbitMQ, and cloud object storage integrations as the platform evolves.',
     ],
-    visibility: 'Professional',
+    visibility: 'Personal',
   },
 ];
 

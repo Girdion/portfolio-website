@@ -4,17 +4,29 @@ import { IconList } from '../icons/IconList';
 
 type ProjectCardProps = {
   project: Project;
+  index: number;
 };
 
-export function ProjectCard({ project }: ProjectCardProps) {
+export function ProjectCard({ project, index }: ProjectCardProps) {
+  const projectNumber = String(index + 1).padStart(2, '0');
+
   return (
-    <article className="flex h-full min-w-0 flex-col border border-neutral-200 bg-white p-5 transition duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-0.5 hover:border-neutral-950 hover:shadow-[0_12px_28px_rgba(0,0,0,0.06)] dark:border-neutral-800 dark:bg-neutral-950 dark:hover:border-white dark:hover:shadow-[0_12px_28px_rgba(255,255,255,0.04)] sm:p-8">
+    <article
+      className="project-card group relative flex h-full min-w-0 flex-col overflow-hidden border border-neutral-200 bg-white p-5 dark:border-neutral-800 dark:bg-neutral-950 sm:p-8"
+      style={{ animationDelay: `${index * 90}ms` }}
+    >
+      <span
+        aria-hidden="true"
+        className="absolute inset-x-0 top-0 h-0.5 origin-left scale-x-0 bg-neutral-950 transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-x-100 group-focus-within:scale-x-100 dark:bg-white"
+      />
       <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between sm:gap-6">
         <div>
-          <p className="text-xs uppercase tracking-[0.18em] text-neutral-500 dark:text-neutral-400">
-            {project.category}
-          </p>
-          <h3 className="mt-4 text-xl font-semibold tracking-[-0.02em] text-neutral-950 dark:text-white sm:text-2xl">
+          <div className="flex items-center gap-3 text-xs uppercase tracking-[0.18em] text-neutral-500 dark:text-neutral-400">
+            <span>{projectNumber}</span>
+            <span aria-hidden="true" className="h-px w-5 bg-current opacity-50" />
+            <span>{project.category}</span>
+          </div>
+          <h3 className="mt-5 text-xl font-semibold tracking-[-0.025em] text-neutral-950 dark:text-white sm:text-2xl">
             {project.title}
           </h3>
         </div>
@@ -23,13 +35,17 @@ export function ProjectCard({ project }: ProjectCardProps) {
         </p>
       </div>
 
-      <p className="mt-5 text-base leading-7 text-neutral-600 dark:text-neutral-300">{project.description}</p>
+      <p className="mt-5 max-w-xl text-base leading-7 text-neutral-600 dark:text-neutral-300">{project.description}</p>
 
-      <div className="mt-6">
+      <div className="mt-7 border-y border-neutral-100 py-5 dark:border-neutral-900">
         <IconList showLabels technologies={project.technologies} />
       </div>
 
-      <ul className="mt-7 space-y-3">
+      <div className="mt-7 flex items-center gap-3">
+        <span aria-hidden="true" className="h-px w-7 bg-neutral-950 dark:bg-white" />
+        <p className="text-[0.68rem] font-medium uppercase tracking-[0.18em] text-neutral-500 dark:text-neutral-400">Highlights</p>
+      </div>
+      <ul className="mt-4 space-y-3">
         {project.achievements.map((item) => (
           <li key={item} className="flex gap-3 text-sm leading-7 text-neutral-700 dark:text-neutral-200">
             <span aria-hidden="true" className="mt-3 h-px w-4 shrink-0 bg-neutral-950 dark:bg-white" />
@@ -39,7 +55,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
       </ul>
 
       {(project.githubUrl || project.liveDemoUrl) ? (
-        <div className="mt-8 flex flex-wrap gap-3 border-t border-neutral-200 pt-5 dark:border-neutral-800">
+        <div className="mt-8 flex flex-wrap gap-4 border-t border-neutral-200 pt-5 dark:border-neutral-800">
           {project.githubUrl ? (
             <a
               href={project.githubUrl}

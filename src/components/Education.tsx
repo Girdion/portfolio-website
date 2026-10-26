@@ -17,7 +17,7 @@ export function Education() {
             <p className="mt-3 text-base leading-7 text-neutral-600 dark:text-neutral-300">
               Computer Science, Aug 2022 - Sep 2026
             </p>
-            <p className="mt-5 text-xl font-semibold text-neutral-950 dark:text-white">CGPA 3.85 / 4.00</p>
+            <p className="mt-5 text-xl font-semibold text-neutral-950 dark:text-white">CGPA: 3.85 / 4.00</p>
           </div>
           <div>
             <h3 className="text-2xl font-semibold tracking-[-0.02em] text-neutral-950 dark:text-white">
