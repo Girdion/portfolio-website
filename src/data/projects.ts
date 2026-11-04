@@ -72,7 +72,7 @@ export const projects: Project[] = [
     technologies: ['react', 'javascript', 'tailwind', 'mui', 'nginx'],
     achievements: [
       'Reduced frontliner idle time by 87.5% with real-time dashboards and TV display views.',
-      'Engineered 5+ C# (ASP.NET) APIs for check-in, walk-in services, and frontliner status tracking.',
+      'Engineered 10+ C# (ASP.NET) APIs for check-in, walk-in services, and frontliner status tracking.',
       'Deployed through a micro-frontend architecture on Nginx.',
     ],
     visibility: 'Professional',

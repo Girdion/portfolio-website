@@ -63,7 +63,7 @@ export const experiences: Experience[] = [
       'Built responsive React, Redux, and Tailwind CSS interfaces for RIANG, an employee super app used by 1,500+ employees.',
       'Owned end-to-end development of reimbursement, office car, and snack-meeting modules, including multi-step forms and approval workflows integrated with RIANG OPEX.',
       'Built a branch-office queue management system from scratch, replacing a manual process and reducing frontliner idle time by 87.5%.',
-      'Engineered 5+ C# (ASP.NET) APIs for customer check-in, walk-in services, and frontliner status tracking; deployed with a micro-frontend architecture on Nginx.',
+      'Engineered 10+ C# (ASP.NET) APIs for customer check-in, walk-in services, and frontliner status tracking; deployed with a micro-frontend architecture on Nginx.',
       'Integrated multi-factor authentication with Microsoft Identity and Azure for secure login.',
     ],
     stack: ['react', 'javascript', 'tailwind', 'mui', 'git'],
