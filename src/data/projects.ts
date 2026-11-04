@@ -8,6 +8,7 @@ export type Technology =
   | 'github'
   | 'gitlab'
   | 'go'
+  | 'kafka'
   | 'javascript'
   | 'microfrontend'
   | 'microservices'
@@ -82,11 +83,10 @@ export const projects: Project[] = [
     category: 'Backend job application platform',
     description:
       'A Go backend application for managing job applications, focused on RESTful API design and relational data modeling.',
-    technologies: ['go', 'postgresql', 'redis', 'docker'],
+    technologies: ['go', 'postgresql', 'redis', 'kafka', 'docker'],
     achievements: [
       'Developing the API with Go (Gin) and PostgreSQL for job application management.',
-      'Building a modular architecture designed for caching, asynchronous processing, and file management.',
-      'Planning Redis, RabbitMQ, and cloud object storage integrations as the platform evolves.',
+      'Building a modular architecture using Redis for caching and Kafka for asynchronous processing, with cloud object storage planned.',
     ],
     visibility: 'Personal',
   },
